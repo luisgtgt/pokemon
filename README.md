@@ -1,2 +1,2 @@
 # pokemon
-it is a page for view pokemons
+It's a website for watching Pokémon.
