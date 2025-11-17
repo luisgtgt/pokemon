@@ -1,0 +1,64 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    place-content: center;
+    justify-content: center;
+    justify-items: center;
+   
+    .columna1{
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+        width: 100%;
+        height: 95vh;
+        background-color: aqua;
+        border-radius: 50px;
+        #numero{
+            font-size: 100px;
+        }
+        #tipos{
+            display:flex;
+            .tipo{
+                background-color: rgb(208, 255, 87);
+                border-radius: 30px;
+                margin: 30px;
+                padding: 20px;
+                width: 40%;
+            }
+        }
+        #debilidades{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .debilidad{
+                margin: 10px;
+                background-color: rgb(81, 134, 240);
+                padding: 20px;
+                border-radius: 30px            }
+        }
+    }
+    .imagen{
+        justify-content: center;
+        justify-items: center;
+        #imagen{
+            width: 300px;
+        }
+    }
+    .datos{
+        display: flex;
+        flex-direction: column;
+        .barra{
+            border: 1px solid black;
+            width: 100%;
+            height: 20px;
+            border-radius: 20px;
+            [id^="color"]{
+                background-color: blueviolet;
+                height: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="columna1">
+        <div id="numero"></div>
+        <h4>Tipos</h4>
+        <div id="tipos"></div>
+        <h4>Debilidades</h4>
+        <div id="debilidades"></div>
+    </div>
+    <div class="imagen">
+        <div class="buscar">
+            <input type="text" placeholder="escribe el numero o nombre de tu pokemon" id="pokemon">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+        <div>
+            <img src="" alt="" id="imagen">
+        </div>
+    </div>
+    <div class="datos">
+        <h1>Estadisticas</h1>
+        <div>
+            <h3>HP</h3>
+            <div class="barra">
+                <div id="color-hp"></div>
+            </div>
+        </div>
+        <div>
+            <h3>ATTACK</h3>
+            <div class="barra">
+                <div id="color-attack"></div>
+            </div>
+        </div>
+        <div>
+            <h3>DEFENSE</h3>
+            <div class="barra">
+                <div id="color-defense"></div>
+            </div>
+        </div>
+        <div>
+            <h3>SP ATTAC</h3>
+            <div class="barra">
+                <div id="color-spattack"></div>
+            </div>
+        </div>
+        <div>
+            <h3>SP DEFENSE</h3>
+            <div class="barra">
+                <div id="color-spdefense"></div>
+            </div>
+        </div>
+        <div>
+            <h3>SPEED</h3>
+            <div class="barra">
+                <div id="color-speed"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
