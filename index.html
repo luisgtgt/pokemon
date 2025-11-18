@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
-    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/ketchum" rel="stylesheet">
+    <title>Pokemon</title>
 </head>
+
 <body>
+    <video src="./media/pokemon-diamond-and-pearl.1920x1080.mp4" id="fondo-total" autoplay muted loop playsinline>
+    </video>
     <div class="columna1">
         <div id="numero"></div>
         <h4>Tipos</h4>
@@ -17,13 +22,17 @@
         <div id="debilidades"></div>
     </div>
     <div class="imagen">
+        <h1 id="nombre">Pokemon</h1>
         <div class="buscar">
             <input type="text" placeholder="escribe el numero o nombre de tu pokemon" id="pokemon">
             <button onclick="buscar()">Buscar</button>
         </div>
-        <div>
-            <img src="" alt="" id="imagen">
+        <div id="pokeball">
+            <div>
+                <img src="" alt="" id="imagen">
+            </div>
         </div>
+
     </div>
     <div class="datos">
         <h1>Estadisticas</h1>
@@ -65,4 +74,5 @@
         </div>
     </div>
 </body>
+
 </html>

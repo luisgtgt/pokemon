@@ -1,26 +1,44 @@
-body{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+@import url('https://fonts.cdnfonts.com/css/ketchum');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#fondo-total {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+body {
+    height: 100vh;
     place-items: center;
     place-content: center;
     justify-content: center;
     justify-items: center;
-   
-    .columna1{
-        display: flex;
+
+
+    .columna1 {
+        display: none;
         flex-direction: column;
         place-content: center;
         place-items: center;
-        width: 100%;
-        height: 95vh;
         background-color: aqua;
         border-radius: 50px;
-        #numero{
+
+        #numero {
             font-size: 100px;
         }
-        #tipos{
-            display:flex;
-            .tipo{
+
+        #tipos {
+            display: flex;
+
+            .tipo {
                 background-color: rgb(208, 255, 87);
                 border-radius: 30px;
                 margin: 30px;
@@ -28,33 +46,57 @@ body{
                 width: 40%;
             }
         }
-        #debilidades{
+
+        #debilidades {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            .debilidad{
+
+            .debilidad {
                 margin: 10px;
                 background-color: rgb(81, 134, 240);
                 padding: 20px;
-                border-radius: 30px            }
+                border-radius: 30px
+            }
         }
     }
-    .imagen{
+
+    .imagen {
+        place-content: center;
+        place-items: center;
         justify-content: center;
         justify-items: center;
-        #imagen{
-            width: 300px;
+
+        #nombre {
+            font-family: 'Ketchum', sans-serif;
+            font-size: 100px;
+            color: #ffcb05;
+            -webkit-text-stroke: 3px #2a75bb;
         }
+
+        #pokeball {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./media/1.png);
+            background-size:cover;
+            border-radius: 100%;
+            #imagen {
+                width: 400px;
+            }
+        }
+
+
     }
-    .datos{
-        display: flex;
+
+    .datos {
+        display: none;
         flex-direction: column;
-        .barra{
+
+        .barra {
             border: 1px solid black;
             width: 100%;
             height: 20px;
             border-radius: 20px;
-            [id^="color"]{
+
+            [id^="color"] {
                 background-color: blueviolet;
                 height: 100%;
                 border-radius: 20px;
