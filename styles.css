@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/ketchum');
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
@@ -67,17 +68,68 @@ body {
         justify-content: center;
         justify-items: center;
 
+
+
         #nombre {
             font-family: 'Ketchum', sans-serif;
             font-size: 100px;
             color: #ffcb05;
             -webkit-text-stroke: 3px #2a75bb;
+            margin: 10px;
+        }
+
+        .buscar {
+            position: relative;
+            width: 220px;
+            height: 50px;
+
+            img {
+                position: absolute;
+                width: 220px;
+                z-index: -1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #pokemon {
+               
+                border: none;
+                background: transparent;
+                position: absolute;
+                left: 43%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                outline: none;
+                border-top-right-radius: -50px;
+                border-bottom-right-radius: -50px;
+                color: #7f2000;
+            }
+
+            #pokemon::placeholder {
+                color: rgba(165, 19, 0, 0.5);
+            }
+
+            button {
+                position: absolute;
+                right: 0;
+                border-radius: 100%;
+                width: 40px;
+                height: 40px;
+                background: transparent;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                right: -7.5%;
+                border: none;
+            }
         }
 
         #pokeball {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./media/1.png);
-            background-size:cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/1.png);
+            background-size: cover;
             border-radius: 100%;
+            margin: 20px;
+
             #imagen {
                 width: 400px;
             }
