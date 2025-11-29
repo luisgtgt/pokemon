@@ -64,8 +64,7 @@ const pokeballsPorTipo = {
 async function buscar() {
     document.querySelector(".columna1").style.display = "flex"
     document.querySelector(".datos").style.display = "flex"
-    document.querySelector("body").style.display = "grid"
-    document.querySelector("body").style.gridTemplateColumns = "40% 40% 20%";
+    document.querySelector("body").classList.add("grid")
     // añado el pokemon que busco desde el input
     let pokemon = document.getElementById("pokemon").value
     // pido a axios que me consulte la api

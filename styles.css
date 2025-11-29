@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+}
+
 #fondo-total {
     position: fixed;
     z-index: -1;
@@ -42,9 +47,8 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: fill; 
+            object-fit: fill;
             margin: 0px px
-
         }
 
         #numero {
@@ -72,7 +76,7 @@ body {
 
 
             .debilidad {
-                display:flex;
+                display: flex;
                 justify-content: center;
                 flex: 0 0 100px;
                 margin: 2px;
@@ -88,8 +92,6 @@ body {
         place-items: center;
         justify-content: center;
         justify-items: center;
-
-
 
         #nombre {
             font-family: 'Ketchum', sans-serif;
@@ -184,8 +186,61 @@ body {
         }
     }
 }
-@media(max-width: 1010px){
-    body{
-        grid-template-columns: 50% 50%;
+
+.datos,
+.columna1 {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+@media(max-width: 1010px) {
+    .grid {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        place-items: center;
+        place-content: center;
+
+        .imagen {
+            grid-column: 1 / 4;
+            grid-row: 1
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .grid {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+
+        .imagen {
+            grid-column: 1;
+            grid-row: 1
+        }
+    }
+}
+
+@media(max-width: 445px) {
+    body {
+        .imagen {
+            #pokeball {
+                #imagen {
+                    width: 250px;
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width: 335px) {
+    body {
+        .imagen {
+            #nombre {
+                font-size: 80px;
+            }
+        }
+
     }
 }
