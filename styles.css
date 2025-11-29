@@ -219,6 +219,13 @@ body {
             grid-row: 1
         }
     }
+    body{
+        .datos{
+            margin: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    }
 }
 
 @media(max-width: 445px) {
