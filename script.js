@@ -65,7 +65,7 @@ async function buscar() {
     document.querySelector(".columna1").style.display = "flex"
     document.querySelector(".datos").style.display = "flex"
     document.querySelector("body").style.display = "grid"
-    document.querySelector("body").style.gridTemplateColumns = "33.3% 33.3% 33.3%";
+    document.querySelector("body").style.gridTemplateColumns = "40% 40% 20%";
     // añado el pokemon que busco desde el input
     let pokemon = document.getElementById("pokemon").value
     // pido a axios que me consulte la api
