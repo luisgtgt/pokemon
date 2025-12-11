@@ -64,7 +64,10 @@ const pokeballsPorTipo = {
 async function buscar() {
     document.querySelector(".columna1").style.display = "flex"
     document.querySelector(".datos").style.display = "flex"
+    document.querySelector(".pyh").style.display = "flex"
     document.querySelector("body").classList.add("grid")
+    
+    let coloresfondo = []
     // añado el pokemon que busco desde el input
     let pokemon = document.getElementById("pokemon").value
     // pido a axios que me consulte la api
@@ -78,10 +81,27 @@ async function buscar() {
     datos.data.types.forEach(cosa => {
         let nuevo = document.createElement("div");
         nuevo.textContent = cosa.type.name
+        nuevo.style.border = "1px solid black"
+        nuevo.style.backgroundColor = coloresPorTipo[cosa.type.name];
+        coloresfondo.push(coloresPorTipo[cosa.type.name])
         console.log(cosa.type.name)
         nuevo.classList.add("tipo");
         tipos.appendChild(nuevo)
     });
+
+    if(coloresfondo.length > 1){
+        document.getElementById("pantalla").style.background = `linear-gradient(45deg, ${coloresfondo[0]}, ${coloresfondo[1]})`
+    }
+    else{
+        document.getElementById("pantalla").style.background = `${coloresfondo[0]}`
+    }
+
+    console.log(coloresfondo)
+    //colocamos peso y altura
+    document.getElementById("altura").textContent = datos.data.weight
+    document.getElementById("peso").textContent = datos.data.height
+  
+
 
     //colocamos respectiva pokeball
     document.getElementById("pokeball").style.backgroundImage = `url(${pokeballsPorTipo[datos.data.types["0"]["type"]["name"]]})`
@@ -89,13 +109,14 @@ async function buscar() {
     // aca asigno el numero a el elemento numero de mi html
     let numero = document.getElementById("numero")
     document.getElementById("numero").textContent = datos.data.id
-    // aca asigno a devilidades sus respectivas debilidades
+    // aca asigno a debilidades sus respectivas debilidades
     let deb = document.getElementById("debilidades")
     deb.textContent = ""
     datos.data.types.forEach(tipo => {
         debilidades[tipo.type.name].forEach(valor => {
             let nuevo = document.createElement("div");
             nuevo.textContent = valor;
+            nuevo.style.backgroundColor = coloresPorTipo[valor];
             nuevo.classList.add("debilidad");
             deb.appendChild(nuevo)
         }

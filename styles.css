@@ -50,6 +50,16 @@ body {
             object-fit: fill;
             margin: 0px px
         }
+        
+        #pantalla{
+            position:absolute;
+            background-color:aqua;
+            width: 70%;
+            height: 56%;
+            border-radius: 10px;
+            bottom: 21%;
+            z-index: -1;
+        }
 
         #numero {
             font-size: 100px;
@@ -64,7 +74,7 @@ body {
                 border-radius: 30px;
                 margin: 3px;
                 padding: 10px;
-                width: 40%;
+                width: auto;
             }
         }
 
@@ -99,7 +109,7 @@ body {
             color: #ffcb05;
             -webkit-text-stroke: 3px #2a75bb;
             margin: 10px;
-        }
+        }  
 
         .buscar {
             position: relative;
@@ -131,6 +141,8 @@ body {
 
             #pokemon::placeholder {
                 color: rgba(165, 19, 0, 0.5);
+                margin-left: 5px;
+                margin-right: 5px;
             }
 
             button {
@@ -155,6 +167,23 @@ body {
 
             #imagen {
                 width: 400px;
+            }
+        }
+        .pyh{
+            display:none;
+            place-items: center;
+            h3{
+                font-family:'Ketchum', sans-serif;
+                font-size: 40px;
+                color: #2a75bb;
+                -webkit-text-stroke: 0.5px #ffcb05;
+            }
+            p{
+                margin-right: 30px;
+                margin-left: 10px;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #7f2000;
             }
         }
 
@@ -234,6 +263,12 @@ body {
             #pokeball {
                 #imagen {
                     width: 250px;
+                }
+            }
+            .pyh{
+                flex-direction: column;
+                p{
+                    margin-bottom: 30px;
                 }
             }
         }
